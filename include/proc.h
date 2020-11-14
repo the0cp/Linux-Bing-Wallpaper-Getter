@@ -12,6 +12,6 @@
 
 extern char *geTime();
 extern void makeDir(char *TIME_MD);
-extern char *parseXml();
+extern char *parseXml(char *TIME_PX);
 
 

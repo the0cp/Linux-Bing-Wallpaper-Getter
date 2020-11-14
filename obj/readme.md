@@ -1,1 +1,1 @@
-Where to store objs.
+# It's an obj folder.

@@ -1,12 +1,12 @@
 #include "../include/proc.h"
 #include "../include/download.h"
 
-char *parseXml()
+char *parseXml(char *TIME_PX)
 {
 	char *img_url;
 	char *urlPart;
   	char *xmlName;
-  	asprintf(&xmlName, "%s%s%s%s%s", "/home/", getlogin(), "/BBG-Download/", geTime(), "/index.xml");
+  	asprintf(&xmlName, "%s%s%s%s%s", "/home/", getlogin(), "/BBG-Download/", TIME_PX, "/index.xml");
   	xmlDocPtr pdoc = NULL;
   	xmlNodePtr proot = NULL;
   	xmlNodePtr pcur = NULL;

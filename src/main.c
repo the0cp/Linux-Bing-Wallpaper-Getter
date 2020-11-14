@@ -8,6 +8,5 @@ int main()
   makeDir(time);
   downloadXml(time);
   downloadImg(time);
-  //free(imgName);
   return 0;
 }

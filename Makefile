@@ -5,7 +5,7 @@ OBJ = ./obj
 SOURCE = $(wildcard ${SRC}/*.c)
 OBJECT = $(patsubst %.c,${OBJ}/%.o,$(notdir ${SOURCE}))
  
-TARGET = main
+TARGET = bingbg
 SRC_TARGET = ./${TARGET}
  
 CC = gcc 
