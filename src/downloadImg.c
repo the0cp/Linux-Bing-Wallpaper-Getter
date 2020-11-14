@@ -9,7 +9,7 @@ void downloadImg(char *TIME_IMG, char *USRNAME)
   FILE *fpImg;
   CURLcode resImg;
   char *imgName;
-  char *img_url_f = parseXml(TIME_IMG);
+  char *img_url_f = parseXml(TIME_IMG, USRNAME);
   asprintf(&imgName, "%s%s%s%s%s", "/home/", USRNAME, "/BBG-Download/", TIME_IMG, "/Wallpaper.jpg");
   printf("<Downloading Image!!!>\n");
   curlImg = curl_easy_init();
