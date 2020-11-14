@@ -2,7 +2,7 @@
 #include "../include/proc.h"
 #include "../include/write_data.h"
 
-void downloadImg(char *TIME_IMG)
+void downloadImg(char *TIME_IMG, char *USRNAME)
 {
   printf("<Image: Start Downloading!!!>\n");
   CURL *curlImg;
@@ -10,7 +10,7 @@ void downloadImg(char *TIME_IMG)
   CURLcode resImg;
   char *imgName;
   char *img_url_f = parseXml(TIME_IMG);
-  asprintf(&imgName, "%s%s%s%s%s", "/home/", getlogin(), "/BBG-Download/", TIME_IMG, "/Wallpaper.jpg");
+  asprintf(&imgName, "%s%s%s%s%s", "/home/", USRNAME, "/BBG-Download/", TIME_IMG, "/Wallpaper.jpg");
   printf("<Downloading Image!!!>\n");
   curlImg = curl_easy_init();
   if(curlImg)

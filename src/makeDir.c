@@ -1,11 +1,11 @@
 #include "../include/proc.h"
 
-void makeDir(char *TIME_MD)
+void makeDir(char *TIME_MD, char *USRNAME)
 {
   char *folderPath;
-  asprintf(&folderPath, "%s%s%s", "/home/", getlogin(), "/BBG-Download");
+  asprintf(&folderPath, "%s%s%s", "/home/", USRNAME, "/BBG-Download");
   //strcpy(folderPath, "/home/");
-  //strcat(folderPath, getlogin());
+  //strcat(folderPath, USRNAME);
   //strcat(folderPath, "/BBG-Download");
 
   printf("Creating work-folder...\n");
@@ -21,7 +21,7 @@ void makeDir(char *TIME_MD)
     printf("Folder is already created!!\n");
   }
   free(folderPath);
-  asprintf(&folderPath, "%s%s%s%s", "/home/", getlogin(), "/BBG-Download/", TIME_MD);
+  asprintf(&folderPath, "%s%s%s%s", "/home/", USRNAME, "/BBG-Download/", TIME_MD);
 
   if (access(folderPath, 0) == -1)
   {

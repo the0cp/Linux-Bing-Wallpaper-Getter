@@ -11,7 +11,7 @@
 
 
 extern char *geTime();
-extern void makeDir(char *TIME_MD);
-extern char *parseXml(char *TIME_PX);
+extern void makeDir(char *TIME_MD, char *USRNAME);
+extern char *parseXml(char *TIME_PX, char *USRNAME);
 
 

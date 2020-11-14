@@ -15,5 +15,5 @@
 #include <libxml/parser.h>
 
 
-extern void downloadXml(char *TIME_XML);
-extern void downloadImg(char *TIME_IMG);
+extern void downloadXml(char *TIME_XML, char *USRNAME);
+extern void downloadImg(char *TIME_IMG, char *USRNAME);

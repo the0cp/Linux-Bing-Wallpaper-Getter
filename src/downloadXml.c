@@ -4,7 +4,7 @@
 
 
 
-void downloadXml(char *TIME_XML)
+void downloadXml(char *TIME_XML, char *USRNAME)
 {
   char *xml_url = "https://www.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=en-US";
   printf("Start downloading!!!\n");
@@ -12,7 +12,7 @@ void downloadXml(char *TIME_XML)
   FILE *fpXml;
   CURLcode resXml;
   char *xmlName;
-  asprintf(&xmlName, "%s%s%s%s%s", "/home/", getlogin(), "/BBG-Download/", TIME_XML, "/index.xml");
+  asprintf(&xmlName, "%s%s%s%s%s", "/home/", USRNAME, "/BBG-Download/", TIME_XML, "/index.xml");
   printf("Downloading Xml!!!\n");
   curlXml = curl_easy_init();
   if (curlXml)
