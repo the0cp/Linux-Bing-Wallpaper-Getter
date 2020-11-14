@@ -6,8 +6,8 @@ int main()
 {  
   char *time = geTime();
   char *user = getlogin();
-  makeDir(time);
-  downloadXml(time);
-  downloadImg(time);
+  makeDir(time, user);
+  downloadXml(time, user);
+  downloadImg(time, user);
   return 0;
 }
