@@ -1,6 +1,7 @@
 #include "../include/proc.h"
 #include "../include/download.h"
 #include "../include/write_data.h"
+#include "../include/color.h"
 
 int main()
 {  

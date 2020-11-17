@@ -9,7 +9,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-
 extern char *geTime();
 extern void makeDir(char *TIME_MD, char *USRNAME);
 extern char *parseXml(char *TIME_PX, char *USRNAME);

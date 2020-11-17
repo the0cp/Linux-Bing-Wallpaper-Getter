@@ -1,5 +1,6 @@
 #include "../include/proc.h"
 #include "../include/download.h"
+#include "../include/color.h"
 
 char *parseXml(char *TIME_PX, char *USRNAME)
 {
@@ -16,7 +17,7 @@ char *parseXml(char *TIME_PX, char *USRNAME)
 
   	if (pdoc == NULL)
   	{
-    	printf("error:cannot open xml!!!\n");
+    	printf(RED"ERROR:cannot open xml!!!\n");
     	exit(1);
   	}
 
@@ -24,7 +25,7 @@ char *parseXml(char *TIME_PX, char *USRNAME)
 
   	if(proot == NULL)
   	{
-    	printf("error: Xml is empty!!!\n");
+    	printf(RED"ERROR: Xml is empty!!!\n");
     	exit(1);
   	}
 
@@ -40,7 +41,8 @@ char *parseXml(char *TIME_PX, char *USRNAME)
         		if (!xmlStrcmp(nptr->name, BAD_CAST("url")))
         		{       
           			urlPart = XML_GET_CONTENT(nptr->xmlChildrenNode);
-          			printf("url part: %s\n", urlPart);
+          			printf(YELLOW UNDERLINE"URL part: %s", urlPart);
+					printf(NONE"\n");
           			asprintf(&img_url, "%s%s", "https://www.bing.com", urlPart);
           			break;
         		}
@@ -53,8 +55,8 @@ char *parseXml(char *TIME_PX, char *USRNAME)
   	xmlFreeDoc(pdoc);
   	xmlCleanupParser();
   	xmlMemoryDump();
-  	printf("<Parse Done!!!>\n");
-	printf("Full path: %s\n", img_url);	
+  	printf(L_GREEN"<Parse Done!!!>\n");
+	printf(YELLOW"Full path: %s\n", img_url);	
 	return img_url;
 	
 }
