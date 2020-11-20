@@ -3,7 +3,7 @@ Bing-Backgrounds-Getter for Linux.
 Automtically get daily wallpaper from www.bing.com and set as your desktop background.
 
 # Follow
-### My [website](https://theodorecooper.github.io): `theodorecooper.github.io`
+### My <a href="https://theodorecooper.github.io" target="_blank">website</a>: `theodorecooper.github.io`
 ### My Twitter: `@T_Ccooper`
 ### My E-mail: `ccooperr2005@gmail.com`
 
