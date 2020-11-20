@@ -3,6 +3,7 @@
 #include "../include/write_data.h"
 #include "../include/color.h"
 
+
 void downloadXml(char *TIME_XML, char *USRNAME)
 {
   char *xml_url = "https://www.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=en-US";

@@ -11,9 +11,5 @@
 
 #include <curl/curl.h>
 
-#include <libxml/tree.h>
-#include <libxml/parser.h>
-
-
 extern void downloadXml(char *TIME_XML, char *USRNAME);
 extern void downloadImg(char *TIME_IMG, char *USRNAME);
