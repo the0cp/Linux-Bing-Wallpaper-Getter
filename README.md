@@ -11,10 +11,8 @@ Automtically get daily wallpaper from www.bing.com and set as your desktop backg
 # How to use
 ```shell
 git clone https://github.com/theodorecooper/Linux-Bing-Backgrounds-Getter.git
-tar zxvf Linux-Bing-Backgrounds-Getter.tar.gz
 cd Linux-Bing-Backgrounds-Getter
 make
-sudo chmod +x bingbg
 ./bingbg
 ```
 
