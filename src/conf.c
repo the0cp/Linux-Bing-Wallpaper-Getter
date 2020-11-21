@@ -6,7 +6,7 @@ void conf(char *USRNAME)
 {
 	char *conFolder;
 	asprintf(&conFolder, "%s%s%s", "/home/", USRNAME, "/.bingbg");
-	printf(NONE"Creating .bingbg");
+	printf(NONE"Creating .bingbg\n");
 
 	if(access(conFolder, 0) == -1)
 	{

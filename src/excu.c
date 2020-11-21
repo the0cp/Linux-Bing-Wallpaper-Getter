@@ -2,49 +2,78 @@
 #include "../include/download.h"
 #include "../include/color.h"
 
-void excu(char *TIME_EX, char *USRNAME)
+void excu(char *TIME_EX, char *USRNAME, char *DE)
 {
-	char *pdEnv;
-	pdEnv = readConf();
 	const char *GNOME = "GNOME";
 	const char *MATE = "MATE";
+	const char *NOTINGBAD = "BAD";
 	char *picUri;
+	pid_t status;
 	asprintf(&picUri, "%s%s%s%s%s", "/home/", USRNAME, "/BBG-Download/", TIME_EX, "/Wallpaper.jpg");
-	if(*pdEnv == *GNOME)
+	if(*DE == *GNOME)
 	{
 		printf(NONE"Setting Background(GNOME3)...\n");
 		char *gnome_com;
 		asprintf(&gnome_com, "%s%s%s%s", "gsettings set org.gnome.desktop.background picture-uri ", "\"", picUri, "\"");
-		if(!system(gnome_com))
+		status = system(gnome_com);
+		if(status == -1)
 		{
-			printf(RED"Cannot set background, please check the config file and your desktop environment!!!\n");
+			printf(RED"Cannot set background!!!(systen error...)\n");
 			exit(1);
 		}
 		else
 		{
-			printf(YELLOW"Successfully!!!\n");
+			if(WIFEXITED(status))
+			{
+				if(WEXITSTATUS(status) == 0)
+				{
+					printf(YELLOW"Successfully!!!\n");
+				}
+				else
+				{
+					printf(RED"Cannot set background!!!(run error: %d)\n", WEXITSTATUS(status));
+				}
+			}
+			else
+			{
+				printf(RED"exit code %d \n", WEXITSTATUS(status));
+			}
 		}
 	}
-	else if(*pdEnv == *MATE)
+	else if(*DE == *MATE)
 	{
 		printf(NONE"Setting Background(MATE)...\n");
 		char *mate_com;
 		asprintf(&mate_com, "%s%s%s%s", "gsettings set org.mate.background picture-filename ", "\"", picUri, "\"");
-		if(!system(mate_com))
+		status = system(mate_com);
+		if(status == -1)
 		{
-			printf(RED"Cannot set background, please check the config file and your desktop environment!!!\n");
+			printf(RED"Cannot set background!!!(systen error...)\n");
 			exit(1);
 		}
 		else
 		{
-			printf(YELLOW"Successfully!!!\n");
+			if(WIFEXITED(status))
+			{
+				if(WEXITSTATUS(status) == 0)
+				{
+					printf(YELLOW"Successfully!!!\n");
+				}
+				else
+				{
+					printf(RED"Cannot set background!!!(run error: %d)\n", WEXITSTATUS(status));
+				}
+			}
+			else
+			{
+				printf(RED"exit code %d \n", WEXITSTATUS(status));
+			}
 		}
 	}
-	else
+	else if(*DE == *NOTINGBAD)
 	{
-		printf(RED"PLEASE CHECK THE CONFIG FILE!!!\n");
-		exit(1);
+		printf(YELLOW"Setting Background(BING! Nothing Done)...\n");
 	}
-	free(pdEnv);
+	free(DE);
 	free(picUri);
 }

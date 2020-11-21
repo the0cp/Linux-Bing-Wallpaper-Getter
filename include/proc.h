@@ -17,7 +17,7 @@ extern char *geTime();
 extern void conf(char *USRNAME);
 extern char *readConf();
 extern char *setDE();
-extern void excu(char *TIME_EX, char *USRNAME);
+extern void excu(char *TIME_EX, char *USRNAME, char *DE);
 extern void makeDir(char *TIME_MD, char *USRNAME);
 extern char *parseXml(char *TIME_PX, char *USRNAME);
 
