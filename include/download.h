@@ -12,4 +12,4 @@
 #include <curl/curl.h>
 
 extern void downloadXml(char *TIME_XML, char *USRNAME);
-extern void downloadImg(char *TIME_IMG, char *USRNAME);
+extern int downloadImg(char *TIME_IMG, char *USRNAME);

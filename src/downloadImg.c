@@ -3,7 +3,7 @@
 #include "../include/write_data.h"
 #include "../include/color.h"
 
-void downloadImg(char *TIME_IMG, char *USRNAME)
+int downloadImg(char *TIME_IMG, char *USRNAME)
 {
   printf(L_GREEN"<Image: Start Downloading!!!>\n");
   CURL *curlImg;
@@ -29,4 +29,5 @@ void downloadImg(char *TIME_IMG, char *USRNAME)
   printf(YELLOW"[%d]The image has been stored in%s\n",&imgName, imgName);
   free(imgName);
   free(img_url_f);
+  return 0;
 }

@@ -12,7 +12,13 @@ int main()
   makeDir(time, user);
   deskenv = readConf();
   downloadXml(time, user);
-  downloadImg(time, user);
-  excu(time, user, deskenv);
+  if(downloadImg(time, user) == 0)
+  {
+    excu(time, user, deskenv);
+  }
+  else
+  {
+    printf(RED"FAILED TO DOWNLOAD WALLPAPER!!!\n");
+  }
   return 0;
 }
