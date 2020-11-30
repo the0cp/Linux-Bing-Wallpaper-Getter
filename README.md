@@ -15,6 +15,13 @@ cd Linux-Bing-Backgrounds-Getter
 make
 ./bingbg
 ```
+## Support...
+* Gnome 3
+* Mate
+* Xfce
+* Cinnamon
+* Just download, do not set as background 
+* ***DO NOT SUPPORT KED***
 
 # Tips
 + The wallpapers will be stored at `/home/USER/BBG-Download/DATE/`.
