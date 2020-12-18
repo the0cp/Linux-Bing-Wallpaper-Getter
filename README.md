@@ -8,13 +8,22 @@ Automtically get daily wallpaper from www.bing.com and set as your desktop backg
 ### My E-mail: `ccooperr2005@gmail.com`
 
 ---
-# How to use
+# How to get
 ```shell
 git clone https://github.com/theodorecooper/Linux-Bing-Backgrounds-Getter.git
 cd Linux-Bing-Backgrounds-Getter
 make
-./bingbg
 ```
+## Usage:
+```shell
+./bing [-argument]
+(no arg)  default -- download wallpaper and set background
+-d        default -- download wallpaper and set background
+-s        store -- just download this time
+-h        help -- show help & usage
+-v        version -- show current version
+```
+
 ## Support...
 * Gnome 3
 * Mate
