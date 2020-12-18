@@ -14,6 +14,7 @@
 #include <libxml/parser.h>
 
 extern char *geTime();
+extern void usage();
 extern void conf(char *USRNAME);
 extern char *readConf();
 extern char *setDE();
