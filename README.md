@@ -30,7 +30,7 @@ make
 * Xfce
 * Cinnamon
 * Just download, do not set as background 
-* ***DO NOT SUPPORT KED***
+* ***DO NOT SUPPORT KDE***
 
 # Tips
 + The wallpapers will be stored at `/home/USER/BBG-Download/DATE/`.
