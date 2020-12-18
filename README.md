@@ -17,11 +17,11 @@ make
 ## Usage:
 ```shell
 ./bing [-argument]
-(no arg)  default -- download wallpaper and set background
--d        default -- download wallpaper and set background
--s        store -- just download this time
--h        help -- show help & usage
--v        version -- show current version
+(no arg)    default -- download wallpaper and set background
+-d          default -- download wallpaper and set background
+-s          store -- just download this time
+-h          help -- show help & usage
+-v          version -- show current version
 ```
 
 ## Support...
