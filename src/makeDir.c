@@ -33,8 +33,8 @@ void makeDir(char *TIME_MD, char *USRNAME)
   }
   else
   {
-    printf(RED"[%d]", *folderPath);
-    printf(RED"Failed to ctreate folder '%s', the folder may be exist!!!\n", folderPath);
+    printf(L_RED"[%d]", *folderPath);
+    printf(L_RED"Failed to ctreate folder '%s', the folder may be exist!!!\n", folderPath);
   }
   free(folderPath);
 }
